@@ -76,7 +76,6 @@ export const useRootStore = defineStore('root', {
         ]
       }
     ],
-    // dateId: ref(state.actions.getDateId),
     selectedStage: 0,
     selectedColumn: 0,
     selectedTask: 0,
@@ -107,27 +106,7 @@ export const useRootStore = defineStore('root', {
   actions: {
     getDateId: () => new Date().now,
 
-    // createStage(title) {
-    //   this.stages.columns.push({
-    //     titleStage: title,
-    //     tasks: [],
-    //   })
-    //   // this.getOptionInput()
-    //   this.modalVisibleStage = false
-    // },
     createTask(form) {
-
-      // console.log(form);
-      // console.log(this.stages[0]?.columns[form.stage]);
-      // getStage[form.column].tasks.push({ ...form.task, id: Date.now() })
-      // this.stages[0].tasks.push({
-      //   id: Date.now(),
-      //   titleTask: task,
-      //   bodyTask: body,
-      // stageTask: arrN,
-      // })
-      // console.log(this.stages);
-      // this.modalVisibleTask = false
     },
     getFilteredTasks(tasks, filterQuery) {
       return console.log(tasks.filter((task) => {
@@ -138,7 +117,6 @@ export const useRootStore = defineStore('root', {
       return
     },
     createArr(arrN) {
-      // return this.$state[`arr${arrN}`] = []
     }
   }
 })

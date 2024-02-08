@@ -62,17 +62,12 @@ const detailTask = () => {
 }
 const deleteTask = () => {
     setCurrentStageAndTask()
-    // rootStore.curr = props.indexb
-    // rootStore.curT = props.index
     rootStore.stages[0].columns[props.task.stageTask].tasks.splice(props.index, 1)
 }
 const editTask = (e) => {
-    // console.log(e);
     setCurrentStageAndTask()
     rootStore.curr = props.stageIndex
-    // rootStore.curT = props.index
     showModalEditTask()
-    // rootStore.curr = e.target.__vueParentComponent.attrs.index
 }
 </script>
 <style></style>

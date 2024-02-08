@@ -19,16 +19,11 @@ const props = defineProps({
         required: true
     }
 })
-// const stage = props.stage
 const draggedTask = ref(null)
-// const indexX = rootStore.getCurrentStage
 function showModalTask() {
-    // console.log(e);
-    // console.log(e);
     rootStore.curr = props.stage.stageIndex
     rootStore.modalVisibleTask = true
 }
-// const { stages } = storeToRefs(rootStore)
 function onDragstart(e, task, stageIndex, taskIndex) {
     draggedTask.value = {
         el: e.target,
@@ -36,16 +31,12 @@ function onDragstart(e, task, stageIndex, taskIndex) {
         stageIndex,
         taskIndex
     }
-    // console.log(draggedTask.value);
-    // rootStore.stages[0].columns[stageIndex].tasks.splice(taskIndex, 1)
-    // console.log(task.stageTask);
     e.dataTransfer.dropEffect = 'move'
     e.dataTransfer.effectAllowed = 'move'
     e.dataTransfer.setData('el', e.target.toString())
     e.dataTransfer.setData('task', task.toString())
     e.dataTransfer.setData('stageIndex', stageIndex.toString())
     e.dataTransfer.setData('taskIndex', taskIndex.toString())
-    // console.log(e);
 }
 
 </script>

@@ -35,14 +35,11 @@ function updateStageTask() {
     rootStore.stages[0].columns[0].tasks.forEach(el => el.stageTask = 0)
 }
 const deleteStage = () => {
-    // rootStore.curr = props.stage.stageIndex
     if (props.stage.stageIndex !== 0) {
         const neewArr = rootStore.stages[0].columns.splice(props.stage.stageIndex, 1)
         const aa = JSON.parse(JSON.stringify(neewArr))
         aa[0].tasks.forEach((el) => {
             rootStore.stages[0].columns[0].tasks.push(el)
-            // rootStore.stages[0].columns[0].tasks[el.stageTask]
-            // console.log(el);
         })
         rootStore.stages[0].columns[0].tasks.forEach(el => el.stageTask = 0)
         if (props.stage.stageIndex !== rootStore.stages[0].columns.length) {
@@ -55,11 +52,6 @@ const deleteStage = () => {
 
     }
     rootStore.curr--
-    // rootStore.stages[0].columns.forEach(el => {
-    //     if (el.stageIndex !== 0) {
-    //         el.stageIndex = props.stage.stageIndex - 1
-    //     }
-    // })
 
 }
 const showModalEditStage = () => {

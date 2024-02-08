@@ -4,14 +4,6 @@
     box-sizing: border-box;
 }
 
-/* 
-.buttonHidden {
-    display: none;
-}
-
-.hoverItem:hover~.visibleItem {
-    display: block;
-} */
 
 .min-h-screen {
     min-height: 50vh !important;

@@ -17,29 +17,8 @@ const title = ref(null)
 const emit = defineEmits(['changeOption'])
 
 const changeOption = (n, e) => {
-    // console.log(n, e)
     emit('changeOption', n, e)
 
 }
-// function changeOption() {
-//     emit('modelValue', option)
-// }
-// export default {
-//     props: {
-//         modelValue: {
-//             type: String,
-//         },
-//         optionInput: {
-//             type: Array,
-//             default: () => [],
-//             required: true,
-//         }
-//     },
-//     methods: {
-//         changeOption() {
-//             this.$emit('modelValue', option)
-//         }
-//     }
-// }
 </script>
 <style scoped></style>
